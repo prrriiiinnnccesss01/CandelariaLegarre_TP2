@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Suez+One&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color:  #502314
+}
+
+h1, h3 {
+    font-family: 'Suez One', serif;
+    font-weight: 400;
+  }
+  
+  nav {
+    color: white;
+    width: 100vw;
+    height: 18.83vh;
+    background-color: #502314; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav:hover {
+    background-color:#f42015;
+  }
+  
+
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    left: 0;
+    top: 19vh;
+    background-color:  #502314;
+    width: 100vw;
+    padding: 2vw;
+    min-height: 30vh;
+
+}
+
+nav div {
+
+    display: flex;
+    width: 24.11%;
+
+    justify-content: space-between;
+
+}
+
+
+
+nav,
+header,
+main {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section { 
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+   flex-wrap:wrap;
+   align-content: space-around;
+   height: 100vh;
+
+}
+
+main div {
+    width: 45.83%;
+  
+
+}
+
+div img, video {
+
+width: 100%;
+
+}
+
+header {
+    height: 45.30vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 50px;
+    color:#f42015;
+
+}
+
+h1,
+header h3,
+nav a,
+header a {
+    line-height: 125%;
+}
+
+nav h1 {
+
+    color:rgb(255, 255, 255)
+
+
+}
+
+
+header h3 {
+    text-transform: uppercase;
+    color: green;
+    letter-spacing: 5px;
+
+}
+
+header p {
+    font-size: 20px;
+}
+
+#navega a:hover {
+    transform: none;
+    transition: none;
+    animation-name: none;
+    animation-duration: 0s;
+    animation-delay: 0s;
+    animation-fill-mode: none;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+  }
+  
+#navega a:hover {
+    font-size: 25px;
+  }
+
+header a,
+nav a {
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+header a {
+    background-color: #002bed;
+    width: 150px;
+    border-radius: 8px;
+}
+
+header a:hover,
+nav a:hover {
+    transform: scale(1.2); 
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    animation-name: miMovimiento;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+}
+
+@keyframes miMovimiento {
+    0% {
+      background-color: green;
+    }
+    50% {
+      background-color: #502314;
+    }
+    100% {
+      background-color:#f42015;
+    }
+  }
+
+
+
+nav span {
+    display: none;
+}
+
+/*oculto en la generalidad el menú hamburguesa*/
+
+.icon-menu::before {
+
+    color: white;
+    font-size: 4vw;
+
+
+}
+
+span.icon-menu:hover {
+    cursor: pointer;
+
+
+}
+
+
+.lightboxOverlay { background-color: rgb(216, 216, 216);
+  
+
+}
+
+@media(max-width: 1024px) {
+  
+    nav div {
+        width: 50%;
+    }
+
+    header, section { 
+        margin-bottom: 20px;
+        height: auto;}
+
+}
+
+
+@media (max-width: 768px) {
+
+    nav div {
+        display: none;
+    }
+
+    /*desaparece el grupo de links*/
+
+    nav span {
+        display: inline;
+    }
+
+    section div {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+
+    }
+
+    /*vuelvo a mostrar el menú hamburguesa*/
+
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color:#f42015;
+}
